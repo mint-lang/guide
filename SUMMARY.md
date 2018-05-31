@@ -25,7 +25,7 @@
   * [Styling](reference/components/untitled.md)
   * [Connecting Stores](reference/components/connecting-stores.md)
   * [Using Providers](reference/components/using-providers.md)
-  * Internal State
+  * [Internal State](reference/components/internal-state.md)
 * [Store](reference/store.md)
 * [Routing](reference/routing.md)
 * [Equality](reference/equality.md)
