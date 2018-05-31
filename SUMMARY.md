@@ -24,7 +24,7 @@
   * [Computed Properties](reference/components/computed-properties.md)
   * [Styling](reference/components/untitled.md)
   * [Connecting Stores](reference/components/connecting-stores.md)
-  * Using Providers
+  * [Using Providers](reference/components/using-providers.md)
   * Internal State
 * [Store](reference/store.md)
 * [Routing](reference/routing.md)
