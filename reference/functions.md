@@ -6,7 +6,7 @@ Functions are callable pieces of code which:
 * must have only one expression as the body
 * can take 0 or more parameters
 
-A function is defined by the `fun` keyword followed by it's **name, arguments** and **type:**
+A function is defined by the `fun` keyword followed by its **name, arguments** and **type:**
 
 ```text
 module Greeter {
