@@ -7,6 +7,8 @@
 * [Installation](https://www.mint-lang.com/install)
 * [Using the CLI](getting-started/using-the-cli.md)
 * [Configuration](getting-started/configuration.md)
+* [The Main Component](getting-started/the-main-component.md)
+* [Styling with CSS](getting-started/styling-with-css.md)
 
 ## Reference
 
