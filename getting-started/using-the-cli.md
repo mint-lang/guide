@@ -92,5 +92,5 @@ This will:
 * generate the `index.html` file
 * compile the application in production mode 
 * if a base icon is provided generate favicons in different sizes
-* copy an static files from the `public` directory
+* copy all static files from the `public` directory
 
