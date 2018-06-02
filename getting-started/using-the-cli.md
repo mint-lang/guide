@@ -6,7 +6,7 @@ This is the help section \(you can print this using the `--help` flag\):
 
 ```text
 mint --help
-Mint - Help
+Mint - Help                                           
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Usage:
   mint [flags...] <COMMAND> [arg...]
@@ -27,8 +27,7 @@ Subcommands:
   start    # Starts the development server.
   test     # Runs the tests.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-All done in 124μs!
-
+All done in 197μs!
 ```
 
 ## Initializing a new application

@@ -37,7 +37,7 @@ Function(String, Html)
 
 The `Function` type represents a function, the type parameters \(in the parenthesis\) are the types of the functions arguments, in this case the `String` is the type of the `name` parameter, while the `Html` is the type of the return value.
 
-This type can be read as: 
+This type can be read as:
 
 > A function which takes a `String` and returns `Html`
 
@@ -135,6 +135,4 @@ component Greeter {
   }
 }
 ```
-
-
 

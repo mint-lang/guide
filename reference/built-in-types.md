@@ -17,7 +17,7 @@ A good example is a HTTP request which in Mint looks like this:
 
 where the `Http.ErrorResponse` is a record containing information about the error that happened while `Http.Response` is a record containing the response of the request.
 
-Promises are used in a [**do expressions.**](untitled-1/do.md)
+Promises are used in a [**do expressions.**](control-expressions/do.md)
 
 ## Result
 
@@ -46,7 +46,7 @@ A good example is converting a `String` to a `Number`:
   |> Result.isOk() # true
   ```
 
-Results are used in [**do**](untitled-1/do.md) **and** [**try expressions**](untitled-1/try.md)**.**
+Results are used in [**do**](control-expressions/do.md) **and** [**try expressions**](control-expressions/try.md)**.**
 
 ## Void
 

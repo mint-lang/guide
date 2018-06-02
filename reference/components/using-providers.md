@@ -1,7 +1,3 @@
----
-description: Providers are used to supply any Component subscribed to it with events.
----
-
 # Using Providers
 
 ```text
