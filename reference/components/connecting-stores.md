@@ -19,7 +19,7 @@ component Main {
   fun render : Html {
     <div 
       onClick={\event : Html.Event => setCount(count + 1)}
-      onContextMenu={event : Html.Event => setCount(0) }>
+      onContextMenu={\event : Html.Event => setCount(0) }>
       
       <{ "Count: " + Number.toString(count) }>
       
