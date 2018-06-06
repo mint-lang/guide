@@ -7,7 +7,7 @@ There are times when you have a JavaScript object from somewhere, for example:
 * from event
 * etc...
 
-In order to use them in Mint you have to convert them to a type, and it's done through decoders.
+In order to use them in Mint you have to convert them to a typed object, and it's done through decoders.
 
 A JavaScript object have the type `Object` which can be any JavaScript value including:
 
