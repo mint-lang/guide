@@ -1,4 +1,4 @@
-# JavaScript Interop
+# Inlining JavaScript
 
 {% hint style="danger" %}
 Inlining JavaScript code can be dangerous, in essence you are circumventing the type system, also it can introduce runtime errors! Use it with care!
@@ -6,7 +6,7 @@ Inlining JavaScript code can be dangerous, in essence you are circumventing the 
 
 Since Mint compiles to [JavaScript](https://en.wikipedia.org/wiki/JavaScript) using it inside the language is pretty straightforward.
 
-## Inlining JavaScript
+## Usage
 
 By wrapping JavaScript code in **back-ticks** ```alert('Hello')``` will inline it into the compiled JavaScript output. This kind of inlining can be done any place you would write an **expression.**
 
