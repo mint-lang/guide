@@ -33,6 +33,7 @@
 * [Equality](reference/equality.md)
 * [JavaScript Interop](reference/untitled/README.md)
   * [Inlining JavaScript](reference/untitled/javascript-interop.md)
+  * [Decoding Objects](reference/untitled/decoding-objects.md)
 
 ## TODO
 
