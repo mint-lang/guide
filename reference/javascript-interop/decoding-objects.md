@@ -32,6 +32,10 @@ decode object as String
 
 The **decode expression** will return a `Result(Object.Error, a)` in the case of the example it will be `Result(Object.Error, String)` this allows you use it in a [try expression](../control-expressions/try.md).
 
+{% hint style="info" %}
+If you try to decode a Type which is not supported or try to decode something that is not an `Object`, you will get a nice error message.
+{% endhint %}
+
 An example of decoding a simple record:
 
 ```text
