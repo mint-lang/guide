@@ -31,9 +31,9 @@
 * [Store](reference/store.md)
 * [Routing](reference/routing.md)
 * [Equality](reference/equality.md)
-* [JavaScript Interop](reference/untitled/README.md)
-  * [Inlining JavaScript](reference/untitled/javascript-interop.md)
-  * [Decoding Objects](reference/untitled/decoding-objects.md)
+* [JavaScript Interop](reference/javascript-interop/README.md)
+  * [Inlining JavaScript](reference/javascript-interop/javascript-interop.md)
+  * [Decoding Objects](reference/javascript-interop/decoding-objects.md)
 
 ## TODO
 
