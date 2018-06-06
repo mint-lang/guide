@@ -31,7 +31,7 @@
 * [Store](reference/store.md)
 * [Routing](reference/routing.md)
 * [Equality](reference/equality.md)
-* [Untitled](reference/untitled/README.md)
+* [JavaScript Interop](reference/untitled/README.md)
   * [Inlining JavaScript](reference/untitled/javascript-interop.md)
 
 ## TODO
