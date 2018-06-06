@@ -22,7 +22,7 @@ A decode will try to convert the untyped value to a typed value.
 
 ## Automatic decoding
 
-In mint there is a syntax feature which allows you decode **primitive values** \(`String`, `Bool`, `Number`, `Time`\) **simple structures** \(`Maybe(a)`, `Array(a)`\) and **records** which only have **decodable values**.
+In Mint there is a syntax feature which allows you decode **primitive values** \(`String`, `Bool`, `Number`, `Time`\) **simple structures** \(`Maybe(a)`, `Array(a)`\) and **records** which only have **decodable values**.
 
 To decode an object use the `decode` keyword:
 
