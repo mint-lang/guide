@@ -2,7 +2,7 @@
 
 After you have something on the screen then you probably want to add some styles to it, in Mint this is easy to do, and you can even do it with simple CSS!
 
-In components styles can be defined with an identifier \(which you can think of as a pseudo class\). These styles then can be applied to HTML inside the component, and can contain any number of CSS definitions.
+In components styles can be defined with an identifier \(which you can think of as a CSS class\). These styles then can be applied to HTML inside the component, and can contain any number of CSS definitions.
 
 {% hint style="info" %}
 All styles are scoped to the component its defined in.
