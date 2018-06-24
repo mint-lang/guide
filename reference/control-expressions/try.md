@@ -17,30 +17,38 @@ record User {
 }
 
 module Example {
-  fun decodeUser (object : JSObject) : Result(Json.Error, User) {
+  fun decodeUser (object : Object) : Result(Object.Error, User) {
     try {
-      # Try to decode the email from the object,
-      # if succeeds the value is assigned to the 
-      # "email" variable.
+      /*
+      Try to decode the email from the object,
+      if succeeds the value is assigned to the 
+      "email" variable.
+      */
       email = 
         object
-        |> Json.Decoder.field("email", Json.Decoder.string)
+        |> Object.Decode.field("email", Object.Decode.string)
 
-      # Same for the name.
+      /*
+      Same for the name.
+      */
       name = 
         object
-        |> Json.Decoder.field("name", Json.Decoder.string)
+        |> Object.Decode.field("name", Object.Decode.string)
 
-      # At this point we have the fields so we can return 
-      # a result with the user.  
+      /*
+      At this point we have the fields so we can return 
+      a result with the user.  
+      */
       Result.ok({
         email = email
         name = name
       })
 
-    # If any of the decoders fail we handle it here and
-    # return an result with the error.
-    } catch Json.Error => error {
+    /*
+    If any of the decoders fail we handle it here and
+    return an result with the error.
+    */
+    } catch Object.Error => error {
       Result.error(error)
     }
   }

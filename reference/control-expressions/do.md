@@ -21,35 +21,41 @@ store Users {
 
   fun loadUsers : Array(User) {
     do {
-      # Started to load the users
+      /* Started to load the users */
       next { state | loading = true }
 
-      # Make the request and wait for it to complete 
-      # and store in the "response" variable
-      response = 
-        Http.get('/users.json')
-
-      # Try to decode the list of users and convert the
-      # Result into a Promise so we can handle it here then
-      # store it in the "users" variable
+      /*
+      Make the request and wait for it to complete 
+      and store in the "response" variable
+      */
+      response = Http.get('/users.json')
+      
+      /* Parse the body of the response as JSON */
+      body = Json.parse(repsonse.body)
+        
+      /*
+      Try to decode the list of users and convert the
+      Result into a Promise so we can handle it here then
+      store it in the "users" variable
+      */
       users = 
-        response.body
-        |> Json.decode()
-        |> Json.Decoder.decodeArray(decodeUser)
+        decode response.body as Array(User)
 
-      # If everything went well store the users
+      /* If everything went well store the users */
       next { state | users = users }
 
-    # If the request fails handle it here
+    /* If the request fails handle it here */
     } catch Http.Error => error {
-      next { state | error = error.message }
+      next { state | error = "Something went wrong loading the request" }
 
-    # If the decoding fails handle it here
-    } catch Json.Error => error {
-      next { state | error = error.message }
+    /* If the decoding fails handle it here */
+    } catch Object.Error => error {
+      next { state | error = Object.Error.toString(error) }
 
-    # After everything is handled or finished
-    # it's not loading anymore
+    /*
+    After everything is handled or finished
+    it's not loading anymore
+    */
     } finally {
       next { state | loading = false }
     }
