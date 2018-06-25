@@ -34,10 +34,10 @@ Since Mint is an expression based language the inlined code must always return a
 module Greeter {
   fun greet (name : String) : String {
     `
-    (()=> 
+    (() => {
       let returnValue = "Hello " + name + "!"
       return returnValue
-    )()
+    })()
     `
   }
 }
