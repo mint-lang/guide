@@ -49,7 +49,7 @@ my-app
 
 ## Installing dependencies
 
-You can install dependencies for an application by invoking the binary with the `intall` command:
+You can install dependencies for an application by invoking the binary with the `install` command:
 
 ```text
 mint install
