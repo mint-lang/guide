@@ -2,7 +2,7 @@
 
 To display anything on the screen you need to define the `Main` component. Anything it returns from its `render` function will be shown.
 
-Here we are rendering a button on the screen:
+Here we render a button on the screen:
 
 ```text
 component Main {
@@ -13,6 +13,3 @@ component Main {
   }
 }
 ```
-
-
-

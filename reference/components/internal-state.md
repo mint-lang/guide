@@ -32,5 +32,4 @@ component Main {
 }
 ```
 
-The `state` keyword can be used to attach private state to a Component. This means unlike a property, it can't be passed in from another Component. We're using the `next` keyword to set a new state, just like we would for a property.
-
+The `state :` keyword is used to attach **private** state to a Component. It cannot be passed in from another Component, but is updated with the `next` keyword, just like we would for a property.

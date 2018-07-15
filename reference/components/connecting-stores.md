@@ -1,12 +1,12 @@
 # Connecting Stores
 
-Components can be connected to [stores](../store.md) in order to **use functions and properties from them**.
+Components refer to [stores](../store.md) in order to **use functions and properties from the store**.
 
-Connecting a store is easy with the `connect` keyword:
+The component references a store with the `connect` keyword:
 
 ```text
 store Counter {
-  property count : Number 
+  property count : Number
 
   fun setCount (count : Number) : Void {
     next { state | count = count }
@@ -17,7 +17,7 @@ component Main {
   connect Counter exposing { count, setCount }
 
   fun render : Html {
-    <div 
+    <div
       onClick={\event : Html.Event => setCount(count + 1)}
       onContextMenu={\event : Html.Event => setCount(0) }>
 
@@ -28,5 +28,4 @@ component Main {
 }
 ```
 
-When connecting a store you must explicitly defined which functions or properties you wan to expose from the store, you can do that with the `exposing` keyword after the stores name.
-
+When connecting a store, the component must use the `exposing` keyword to list the particular functions or properties it will use.

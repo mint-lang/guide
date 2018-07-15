@@ -16,11 +16,11 @@ component Test {
 }
 ```
 
-Properties can be accessed by their name inside the component \(in **styles, functions, getters,** etc.\).
+Properties are referenced by name within the component \(in **styles, functions, getters,** etc.\).
 
 ## Passing properties
 
-Properties are passed to the components when they are rendered:
+Property values are passed to the component when it is rendered:
 
 ```text
 component Main {
@@ -32,8 +32,7 @@ component Main {
 
 Things to remember:
 
-* the name of the property must:
-  * start with a lowercase letter
-  * only contain letters and numbers
-* all properties are type checked, giving not matching values will show an error
-
+- The name of the property must:
+  - start with a lowercase letter
+  - contain only letters and numbers
+- All properties are type checked, attempting to set an incompatible value will show an error.

@@ -1,11 +1,11 @@
 # Styling with CSS
 
-After you have something on the screen then you probably want to add some styles to it, in Mint this is easy to do, and you can even do it with simple CSS!
+After you have something on the screen you probably want to add some styles to it. This is easy to do in Mint, you can even do it with simple CSS!
 
-In components styles can be defined with an identifier \(which you can think of as a CSS class\). These styles then can be applied to HTML inside the component, and can contain any number of CSS definitions.
+In components, styles can be defined with an identifier, then applied to HTML using the identifier as a CSS class. A style can contain any number of CSS definitions.
 
 {% hint style="info" %}
-All styles are scoped to the component its defined in.
+A style is scoped to the component it's defined in.
 {% endhint %}
 
 This is how it looks like when we style the component what we just created:
@@ -17,7 +17,7 @@ component Main {
     color: white;
   	border: 0;
   }
-  
+
   fun render : Html {
     <button::button>
       <{ "Click ME!" }>
@@ -26,5 +26,4 @@ component Main {
 }
 ```
 
-The button is now a red one with white text.
-
+The button is now red with white text.

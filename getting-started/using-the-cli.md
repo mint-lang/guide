@@ -1,12 +1,12 @@
 # Using the CLI
 
-Once you installed Mint you will have a `mint` binary at your disposal.
+Once you install Mint you will have a `mint` binary at your disposal.
 
 This is the help section \(you can print this using the `--help` flag\):
 
 ```text
 mint --help
-Mint - Help                                           
+Mint - Help
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Usage:
   mint [flags...] <COMMAND> [arg...]
@@ -32,7 +32,7 @@ All done in 197μs!
 
 ## Initializing a new application
 
-To initialize a new application in a directory you can invoke the binary with the `init` command:
+To initialize a new application, you invoke the binary with the `init` command:
 
 ```text
 mint init my-app
@@ -49,13 +49,13 @@ my-app
 
 ## Installing dependencies
 
-You can install dependencies for an application by invoking the binary with the `install` command:
+You install dependencies by invoking the binary with the `install` command:
 
 ```text
 mint install
 ```
 
-This will build a dependency tree of the packages and install them by cloning their repositories from Git sources into the `.mint` directory.
+This builds a dependency tree of the packages and installs them by cloning their repositories from Git sources into the `.mint` directory.
 
 ## Starting a development server
 
@@ -75,13 +75,13 @@ mint test
 
 This will:
 
-* compile the application including the tests
-* open a browser in headless mode
-* runs the tests in the browser printing the results along the way
+- compile the application including the tests
+- open a browser in headless mode
+- run the tests in the browser printing the results along the way
 
 ## Building for production
 
-The application can be built for production by invoking the binary with the `build` command:
+To build the application for production deployment, invoke the binary with the `build` command:
 
 ```text
 mint build
@@ -89,8 +89,7 @@ mint build
 
 This will:
 
-* generate the `index.html` file
-* compile the application in production mode 
-* if a base icon is provided generate favicons in different sizes
-* copy all static files from the `public` directory
-
+- generate the `index.html` file
+- compile the application in production mode
+- if a base icon is provided, generate favicons in different sizes
+- copy all static files from the `public` directory
