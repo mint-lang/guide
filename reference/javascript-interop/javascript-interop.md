@@ -1,23 +1,19 @@
 # Inlining JavaScript
 
+Since Mint itself compiles to [JavaScript](https://en.wikipedia.org/wiki/JavaScript), including additional JavaScript is pretty straightforward. Simply wrap the JavaScript in **back-ticks** anywhere you would write an expression. Mint assumes that the type of the value returned by this expressions matches whatever is needed by the surrounding Mint code (but see [decoding](decoding-objects.md) for a way to safely convert it).
+
 {% hint style="danger" %}
-Inlining JavaScript code can be dangerous, in essence you are circumventing the type system, also it can introduce runtime errors! Use it with care!
+Inlining allows you to invoke arbitrary JavaScript code. This can cause unexpected runtime errors. You can bypass the Mint type system, storing invalid data in Mint variables and cause Mint itself to be the source of the runtime error. Use it with care!
 {% endhint %}
 
-Since Mint compiles to [JavaScript](https://en.wikipedia.org/wiki/JavaScript) using it inside the language is pretty straightforward.
-
-## Usage
-
-By wrapping JavaScript code in **back-ticks** ```alert('Hello')``` will inline it into the compiled JavaScript output. This kind of inlining can be done any place you would write an **expression.**
-
-Here is an example of calling [Window.alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) when a button is clicked:
+Here is an example inlining a call to the JavaScript function [Window.alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert):
 
 ```text
 component Main {
   fun handleClick (event : Html.Event) : Void {
     `alert("Hello")`
   }
-  
+
   fun render : Html {
     <div onClick={handleClick}>
       <{ "Click to alert!" }>
@@ -26,28 +22,26 @@ component Main {
 }
 ```
 
-## Expressions
+## Inlined JavaScript Statements
 
-Since Mint is an expression based language the inlined code must always return a value. If you need to use multiple statements, wrapping the code in a [self executing anonymous function](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/) will enable you to do that:
+Since Mint is an expression based language, the inlined JavaScript code must also be an expression. If you need to execute multiple JavaScript statements, wrap the code in a [self executing anonymous function](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/):
 
 ```text
 module Greeter {
   fun greet (name : String) : String {
     `
     (() => {
-      let returnValue = "Hello " + name + "!"
-      return returnValue
+      Math.SquareCircle( 1.0);
+      Math.TrisectAngle( Math.Pi / 4)
+      return "Hello " + name + "!"
     })()
     `
   }
 }
 ```
 
+Your code need not return a value if you know that Mint does not expect one in that context (such as at the end of a `do` expression or a function of type `Void`).
+
 {% hint style="warning" %}
-You can always expect the code you write will be use in a `return` statement.
+You should expect your code to be used in a `return` statement.
 {% endhint %}
-
-## Type Checking
-
-Since we cannot type check the result of the inlined JavaScript code,  the type of the inlined code is always matches the which is matched against.
-

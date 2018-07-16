@@ -1,12 +1,12 @@
 # try
 
-`try` is a control expression for **handling synchronous computations that might fail**, for example when you are trying to convert an **untyped** **JavaScript object** into a **typed Record.**
+`try` is a control expression for **handling synchronous computations that might fail**.
 
-A try expression is built up from 3 parts:
+A try expression has 3 parts:
 
-* statements that returns a `Result`
-* catch expressions
-* a return expression
+- statements that returns a `Result`
+- catch expressions
+- a return expression
 
 Let's see an example where we are using this expression to decode an object:
 
@@ -21,22 +21,22 @@ module Example {
     try {
       /*
       Try to decode the email from the object,
-      if succeeds the value is assigned to the 
+      if succeeds the value is assigned to the
       "email" variable.
       */
-      email = 
+      email =
         object
         |> Object.Decode.field("email", Object.Decode.string)
 
       /*
       Same for the name.
       */
-      name = 
+      name =
         object
         |> Object.Decode.field("name", Object.Decode.string)
 
       /*
-      At this point we have the fields so we can return 
+      At this point we have the fields so we can return
       a result with the user.  
       */
       Result.ok({
@@ -57,5 +57,4 @@ module Example {
 
 Keep in mind that **you need to handle all possible errors** that can be returned from a statement, although the compiler has your back here and will show an error if you forgot one.
 
-In contrast to the **do expression** this expression **returns the return value of it's last statement**, this is why every catch expression must return the same type, also as above the compiler will tell you if any of the catch expressions does not match the return value.
-
+In contrast to the `do` expressions, the value of a `try` expression is the value of **its last expression**. So every `catch` expression must also return the same type.

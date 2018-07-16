@@ -1,41 +1,26 @@
 # Equality
 
-In Mint equality is handled in **logical way** meaning that what **seems to be equal should be equal.**
+In Mint, 2 objects are considered equal if they have the same type and all values are equal. The equality operator is `==`.
 
-For example two records with the same type and values should be equal:
-
-```text
-{ name = "Jon Doe" } == { name = "Jon Doe" }
-```
-
-or two `Maybe` with same value should be equal:
+These examples all evaluate to true:
 
 ```text
+{ name = "Jon Doe", age=27 } == { age=27, name = "Jon Doe" }
 Maybe.just("A") == Maybe.just("A")
-```
-
-or just take an `Array` with the same items which should be equal:
-
-```text
 ["A"] == ["A"]
 ```
 
-In many languages \(for example JavaScript\) these type of comparisons would return false, which leads to bugs because it seems logical for these to be true.
+In JavaScript, the same `==` comparison would return false. We say Mint uses "logical" equality.
 
-In Mint there is a special algorithm for checking the quality of two entities. 
+In addition to **records** and **enums**, the following types use logical equality:
 
-Alongside with **records**, and **enums**, the following types have this kind of equality implemented:
+- `String`
+- `Number`
+- `Boolean`
+- `Array`
+- `FormData`
+- `Date`
+- `Maybe`
+- `Result`
 
-* `String`
-* `Number`
-* `Boolean`
-* `Array`
-* `FormData`
-* `Date`
-* `Maybe`
-* `Result`
-
-## Fallback
-
-Since Mint is compiled to JavaScript any type that does not have  a custom comparison algorithm will fall back to use the **strict equality operator** `===`
-
+Types that have not implemented the logical equality operation fall back to using the JavaScript **strict equality operator** `===`
