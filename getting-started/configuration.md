@@ -1,6 +1,6 @@
 # Configuration
 
-Your application / package is configured with the `mint.json` file \(which is a [JSON](https://en.wikipedia.org/wiki/JSON) file\). 
+Your application / package is configured with the `mint.json` file \(which is a [JSON](https://en.wikipedia.org/wiki/JSON) file\).
 
 The initial `mint.json` file of an application looks like this:
 
@@ -26,7 +26,8 @@ All the fields are validated so if something is not right you will get a nice er
 Here are all the possible fields \(dot notation denotes a nested object\):
 
 | Path               | Purpose                                                                                                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------- |  |  |  |  |  |  |  |  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+|                    |                                                                                                                       |  |  |  |  |  |  |
 | name               | The name of your application or package.                                                                              |
 | source-directories | The directories which contains source files of your application.                                                      |
 | test-directories   | The directories which contains tests for your application.                                                            |
@@ -43,4 +44,3 @@ The dependencies object contains all the packages that your application needs. E
 
 * `0.0.0 <= v < 1.0.0` where the `v` is the resolvable version
 * `master:1.0.0` where the first part is the Git reference \(of a branch, commit hash or tag\) followed by a colon and the version the package should resolve as this is necessary because the version is only specified by tags.
-

@@ -8,7 +8,7 @@ In components, styles can be defined with an identifier, then applied to HTML us
 A style is scoped to the component it's defined in.
 {% endhint %}
 
-This is how it looks like when we style the component what we just created:
+This is how it looks when we style the component what we just created:
 
 ```text
 component Main {
