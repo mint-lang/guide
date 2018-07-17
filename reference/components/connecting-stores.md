@@ -6,7 +6,7 @@ Connecting a store is easy with the `connect` keyword:
 
 ```text
 store Counter {
-  property count : Number 
+  property count : Number = 0
 
   fun setCount (count : Number) : Void {
     next { state | count = count }
