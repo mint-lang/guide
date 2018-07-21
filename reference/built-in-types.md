@@ -75,6 +75,6 @@ record Car {
 
 record User {
   name : String,
-  card : Maybe(Car)
+  car : Maybe(Car)
 }
 ```

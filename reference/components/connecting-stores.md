@@ -5,8 +5,9 @@ Components refer to [stores](../store.md) in order to **use functions and proper
 The component references a store with the `connect` keyword:
 
 ```text
-store Counter {
-  property count : Number
+  store Counter {
+
+  property count : Number = 0
 
   fun setCount (count : Number) : Void {
     next { state | count = count }
