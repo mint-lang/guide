@@ -5,7 +5,6 @@ Functions are callable pieces of code which:
 - can take 0 or more parameters
 - must have only one expression as the body
 - can be defined in **components, modules, stores,** and **providers**
--
 
 A function is defined by the `fun` keyword followed by its **name, arguments** and **return type:**
 
@@ -135,6 +134,8 @@ Anonymous functions look like this:
 \event : Number => handleClick(event)
 
 \suffix : String, match : Regex.Match => match.match + suffix
+
+\ : Void => 42
 ```
 
 The `\` introduces the anonymous function and is followed by one or more argument definitions, the `=>` separator, then a single expression that determines the return value.
@@ -150,5 +151,3 @@ component Greeter {
   }
 }
 ```
-
-You must declare at least one parameter, though you do not have to refer to it in the body, and you cannot declare the return type, but it had better be compatible with the expression context or you will hear from the compiler!
