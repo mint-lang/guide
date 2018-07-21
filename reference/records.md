@@ -1,6 +1,6 @@
 # Records
 
-Records are object like data structures, that have a fix set of keys and values.
+Records are data structures that have a fixed set of keys.
 
 You can define a **record type** with the `record` keyword:
 
@@ -13,12 +13,12 @@ record User {
 ```
 
 {% hint style="warning" %}
-Record definitions are unique, so defining a record with a same structure will raise an error.
+Record definitions are globally unique, so defining a record with the same structure but a different name will raise an error.
 {% endhint %}
 
 ## Nested records
 
-Records can be nested in each other, although **record types can only be one level deep.**
+Records can be nested in each other, although **only one level deep.**
 
 ```text
 record Position {
@@ -35,7 +35,7 @@ record Entity {
 Creating a nested record is straightforward:
 
 ```text
-entity = 
+entity =
   {
     position = {
       x = 0,
@@ -50,29 +50,29 @@ entity =
 Records can be created like this:
 
 ```text
-{ 
+{
   email = "john.doe@gmail.com",
-  name = "John Doe", 
+  name = "John Doe",
   id = 0
 }
 ```
 
-You can create a new record from an existing one by copying all none specified fields like this:
+You can create a new record by copying from an existing one and changing only some of the fields, like this:
 
 ```text
-user = 
-  { 
+user =
+  {
     email = "john.doe@gmail.com",
-    name = "John Doe", 
+    name = "John Doe",
     id = 0
   }
 
-updatedUser =   
+updatedUser =
   { user | name = "Stuart" }
 
-{ 
+{
   email = "john.doe@gmail.com",
-  name = "Stuart", 
+  name = "Stuart",
   id = 0
 }
 ```
@@ -86,20 +86,16 @@ Trying to add fields to a record which doesn't have it in it's definition will r
 {% endhint %}
 
 ```text
-user = 
+user =
   {
     name = "Stuart",
     address = {
       location = "Freedonia"
     }
   }
-  
-{ user | 
+
+{ user |
   name = "Bob",  
-  address.location = "Super Silly Fun Land" 
+  address.location = "Super Silly Fun Land"
 }
 ```
-
-[  
-](https://gdotdesign.gitbooks.io/mint-old/content/literals.html)
-

@@ -5,7 +5,7 @@
 Represents the [Boolean type](https://en.wikipedia.org/wiki/Boolean_data_type). It has two possible values `true` and `false`.
 
 ```text
-true 
+true
 false
 ```
 
@@ -15,8 +15,8 @@ Represents the [Number type](https://developer.mozilla.org/en-US/docs/Glossary/N
 
 ```text
 3.14
-42 
--10 
+42
+-10
 ```
 
 {% hint style="warning" %}
@@ -53,11 +53,10 @@ or can be split into smaller consecutive parts
 
 ## Array
 
-An Array is a generic type containing elements of an other type.
+An Array is a generic type containing elements of any other type.
 
 It is typically created with an array literal:
 
 ```text
 [1, 2, 3]
 ```
-

@@ -1,8 +1,8 @@
 # Styling
 
-Mint has CSS support for styling HTML elements built in.
+Mint includes CSS support for styling HTML elements.
 
-Inside components you can define styles with a **style block** that is connected to an identifier:
+Within a component, you define styles with a **style block** named with an identifier:
 
 ```text
 component Test {
@@ -20,7 +20,7 @@ component Test {
 }
 ```
 
-You can apply the styles to an HTML element with by specifying it after the tag of the element `<div::style/>` .
+Then you apply the styles to an HTML element by specifying it after the tag of the element `<div::style/>` .
 
 You can use CSS syntax inside a `style` block.
 
@@ -60,7 +60,7 @@ component Test {
     &:focus {
       color: red;
     }
-    
+
     & a {
       color: blue;
     }
@@ -77,11 +77,11 @@ component Test {
 }
 ```
 
-It is useful when you want to specify styling for **pseudo elements and states** or want to style child elements.
+This is useful for styling **pseudo elements and states** or style child elements.
 
 ## Media queries
 
-[Media queries](https://www.w3.org/TR/css3-mediaqueries/) can be defined for a style. If they match their criteria their contents will apply to any element that  has that style.
+[Media queries](https://www.w3.org/TR/css3-mediaqueries/) can be defined for a style. When matched, their contents apply to all elements that have that style.
 
 ```text
 component Test {
@@ -107,4 +107,3 @@ The compiler separates properties that have interpolations from the ones that do
 During compiling the dynamic properties are converted to use a `style` object that contains the appropriate variables with their expressions.
 
 The defined styles are static and added to the `head` of the document at runtime.
-

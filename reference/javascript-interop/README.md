@@ -1,7 +1,6 @@
 # JavaScript Interop
 
-There are two ways of communicating with the outside world \(JavaScript\):
+Mint provides 2 way interoperability with \(JavaScript\):
 
-* Inlining JavaScript code directly into the compiled output
-* Decode JavaScript objects with decoders
-
+- You can invoke arbitrary JavaScript by [inlining](javascript-interop.md)
+- You can receive data back from JavaScript using [decode expressions](decoding-objects.ms)
