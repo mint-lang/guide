@@ -4,9 +4,9 @@
 
 A try expression has 3 parts:
 
-- statements that returns a `Result`
-- catch expressions
-- a return expression
+* statements that returns a `Result`
+* catch expressions
+* a return expression
 
 Let's see an example where we are using this expression to decode an object:
 
@@ -58,3 +58,4 @@ module Example {
 Keep in mind that **you need to handle all possible errors** that can be returned from a statement, although the compiler has your back here and will show an error if you forgot one.
 
 In contrast to the `do` expressions, the value of a `try` expression is the value of **its last expression**. So every `catch` expression must also return the same type.
+

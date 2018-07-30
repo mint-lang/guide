@@ -1,6 +1,6 @@
 # Inlining JavaScript
 
-Since Mint itself compiles to [JavaScript](https://en.wikipedia.org/wiki/JavaScript), including additional JavaScript is pretty straightforward. Simply wrap the JavaScript in **back-ticks** anywhere you would write an expression. Mint assumes that the type of the value returned by this expressions matches whatever is needed by the surrounding Mint code (but see [decoding](decoding-objects.md) for a way to safely convert it).
+Since Mint itself compiles to [JavaScript](https://en.wikipedia.org/wiki/JavaScript), including additional JavaScript is pretty straightforward. Simply wrap the JavaScript in **back-ticks** anywhere you would write an expression. Mint assumes that the type of the value returned by this expressions matches whatever is needed by the surrounding Mint code \(but see [decoding](decoding-objects.md) for a way to safely convert it\).
 
 {% hint style="danger" %}
 Inlining allows you to invoke arbitrary JavaScript code. This can cause unexpected runtime errors. You can bypass the Mint type system, storing invalid data in Mint variables and cause Mint itself to be the source of the runtime error. Use it with care!
@@ -40,8 +40,9 @@ module Greeter {
 }
 ```
 
-Your code need not return a value if you know that Mint does not expect one in that context (such as at the end of a `do` expression or a function of type `Void`).
+Your code need not return a value if you know that Mint does not expect one in that context \(such as at the end of a `do` expression or a function of type `Void`\).
 
 {% hint style="warning" %}
 You should expect your code to be used in a `return` statement.
 {% endhint %}
+

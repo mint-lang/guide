@@ -60,3 +60,4 @@ It is typically created with an array literal:
 ```text
 [1, 2, 3]
 ```
+

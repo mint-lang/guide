@@ -12,10 +12,11 @@ if (condition) {
 
 There are some rules that will be enforced:
 
-- The `else` branch must be present, if it's missing you will get a syntax error. This ensures you handle all possibilities.
-- The `condition` must evaluate to type `Bool`.
-- The values of both branches **must evaluate to the same type**
+* The `else` branch must be present, if it's missing you will get a syntax error. This ensures you handle all possibilities.
+* The `condition` must evaluate to type `Bool`.
+* The values of both branches **must evaluate to the same type**
 
 {% hint style="info" %}
 Currently there is no shorthand for a conditional expression.
 {% endhint %}
+

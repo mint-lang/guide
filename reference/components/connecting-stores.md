@@ -5,12 +5,11 @@ Components refer to [stores](../store.md) in order to **use functions and proper
 The component references a store with the `connect` keyword:
 
 ```text
-  store Counter {
-
-  property count : Number = 0
+store Counter {
+  state count : Number = 0
 
   fun setCount (count : Number) : Void {
-    next { state | count = count }
+    next { count = count }
   }
 }
 
@@ -19,8 +18,8 @@ component Main {
 
   fun render : Html {
     <div
-      onClick={\event : Html.Event => setCount(count + 1)}
-      onContextMenu={\event : Html.Event => setCount(0) }>
+      onClick={(event : Html.Event) : Void => { setCount(count + 1) }}
+      onContextMenu={(event : Html.Event) : Void => { setCount(0) }}>
 
       <{ "Count: " + Number.toString(count) }>
 
@@ -30,3 +29,4 @@ component Main {
 ```
 
 When connecting a store, the component must use the `exposing` keyword to list the particular functions or properties it will use.
+

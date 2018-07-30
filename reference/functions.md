@@ -2,9 +2,9 @@
 
 Functions are callable pieces of code which:
 
-- can take 0 or more parameters
-- must have only one expression as the body
-- can be defined in **components, modules, stores,** and **providers**
+* can take 0 or more parameters
+* must have only one expression as the body
+* can be defined in **components, modules, stores,** and **providers**
 
 A function is defined by the `fun` keyword followed by its **name, arguments** and **return type:**
 
@@ -20,12 +20,12 @@ module Greeter {
 
 Things to keep in mind:
 
-- the name of the function must:
-  - start with a lowercase letter
-  - contain only letters and numbers
-- **the body of the function is always a single expression**
-- type annotations are mandatory
-- the parentheses for the arguments can be left off if the function does not take any arguments.
+* the name of the function must:
+  * start with a lowercase letter
+  * contain only letters and numbers
+* **the body of the function is always a single expression**
+* type annotations are mandatory
+* the parentheses for the arguments can be left off if the function does not take any arguments.
 
 ## Where block
 
@@ -78,7 +78,7 @@ component Main {
 
 ## Functions as arguments
 
-You can define a function which takes a function as an argument. The type of this argument must be defined (see [below](#type-of-a-function)) and must match the type of the actual function passed at runtime. The function can be an **anonymous** or **named** function.
+You can define a function which takes a function as an argument. The type of this argument must be defined \(see [below](functions.md#type-of-a-function)\) and must match the type of the actual function passed at runtime. The function can be an **anonymous** or **named** function.
 
 ```text
 module Greeter {
@@ -131,23 +131,24 @@ This can be read as:
 Anonymous functions look like this:
 
 ```text
-\event : Number => handleClick(event)
+(event : Number) : Void => { handleClick(event) }
 
-\suffix : String, match : Regex.Match => match.match + suffix
+(suffix : String, match : Regex.Match) : String => { match.match + suffix }
 
-\ : Void => 42
+() : Void { => 42 }
 ```
 
-The `\` introduces the anonymous function and is followed by one or more argument definitions, the `=>` separator, then a single expression that determines the return value.
+The anonymous function starts with one or more argument definitions enclosed by parentheses followed by the type definition after a colon `:` , the `=>` separator, then a single expression that determines the return value enclosed by brackets.
 
 This can be used as an expression anywhere you would use a value:
 
 ```text
 component Greeter {
   fun render : Html {
-    <div onClick={\event : Html.Event => do { Debug.log("Hello") }}>
+    <div onClick={(event : Html.Event) : Void => { do { Debug.log("Hello") }}}>
       <{ "Click Me!" }>
     </div>
   }
 }
 ```
+

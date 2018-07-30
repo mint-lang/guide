@@ -107,3 +107,4 @@ The compiler separates properties that have interpolations from the ones that do
 During compiling the dynamic properties are converted to use a `style` object that contains the appropriate variables with their expressions.
 
 The defined styles are static and added to the `head` of the document at runtime.
+

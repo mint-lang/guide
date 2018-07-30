@@ -14,13 +14,14 @@ In JavaScript, the same `==` comparison would return false. We say Mint uses "lo
 
 In addition to **records** and **enums**, the following types use logical equality:
 
-- `String`
-- `Number`
-- `Boolean`
-- `Array`
-- `FormData`
-- `Date`
-- `Maybe`
-- `Result`
+* `String`
+* `Number`
+* `Boolean`
+* `Array`
+* `FormData`
+* `Date`
+* `Maybe`
+* `Result`
 
 Types that have not implemented the logical equality operation fall back to using the JavaScript **strict equality operator** `===`
+

@@ -2,12 +2,12 @@
 
 In order to process data from JavaScript in Mint, you must convert it from Javascript:
 
-- object `{ name: "Joe" }`
-- array `[1, 2, 3]`
-- number `0`
-- string `"Joe"`
-- `null`
-- `undefined`
+* object `{ name: "Joe" }`
+* array `[1, 2, 3]`
+* number `0`
+* string `"Joe"`
+* `null`
+* `undefined`
 
 ...to a Mint typed value.
 
@@ -60,3 +60,4 @@ In this case, `user` is a `Result(Object.Error, String)`.
 ## Manual decoding
 
 TODO
+

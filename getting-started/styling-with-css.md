@@ -15,7 +15,7 @@ component Main {
   style button {
     background: red;
     color: white;
-  	border: 0;
+      border: 0;
   }
 
   fun render : Html {
@@ -27,3 +27,4 @@ component Main {
 ```
 
 The button is now red with white text.
+

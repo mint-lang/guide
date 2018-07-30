@@ -9,25 +9,23 @@ mint --help
 Mint - Help
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Usage:
-  mint [flags...] <COMMAND> [arg...]
+  mint [flags...] [arg...]
 
 Mint
 
 Flags:
   --help   # Displays help for the current command.
 
-Arguments:
-  COMMAND  # The sub command to run.
-
 Subcommands:
   build    # Builds the project for production
+  docs     # Starts the documentation server
+  format   # Formats source files
   init     # Initializes a new project
   install  # Installs dependencies
   loc      # Counts Lines of Code
-  start    # Starts the development server.
-  test     # Runs the tests.
+  start    # Starts the development server
+  test     # Runs the tests
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-All done in 197μs!
 ```
 
 ## Initializing a new application
@@ -44,6 +42,9 @@ This will scaffold a new application in the `my-app` directory:
 my-app
 ├── source
 │   └── Main.mint
+├── tests
+│   └── Main.mint
+├── .gitignore
 └── mint.json
 ```
 
@@ -75,9 +76,9 @@ mint test
 
 This will:
 
-- compile the application including the tests
-- open a browser in headless mode
-- run the tests in the browser printing the results along the way
+* compile the application including the tests
+* open a browser in headless mode
+* run the tests in the browser printing the results along the way
 
 ## Building for production
 
@@ -89,7 +90,18 @@ mint build
 
 This will:
 
-- generate the `index.html` file
-- compile the application in production mode
-- if a base icon is provided, generate favicons in different sizes
-- copy all static files from the `public` directory
+* generate the `index.html` file
+* compile the application in production mode
+* if a base icon is provided, generate favicons in different sizes
+* copy all static files from the `public` directory
+
+## Browsing documentation of installed packages
+
+To browse the documentation of the application and installed packages, invoke the binary with the \`docs\` command:
+
+```text
+mint docs
+```
+
+It starts a documentation server which can be accessed at `http://localhost:3002`
+

@@ -32,7 +32,8 @@ component Main {
 
 Things to remember:
 
-- The name of the property must:
-  - start with a lowercase letter
-  - contain only letters and numbers
-- All properties are type checked, attempting to set an incompatible value will show an error.
+* The name of the property must:
+  * start with a lowercase letter
+  * contain only letters and numbers
+* All properties are type checked, attempting to set an incompatible value will show an error.
+

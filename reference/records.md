@@ -18,7 +18,7 @@ Record definitions are globally unique, so defining a record with the same struc
 
 ## Nested records
 
-Records can be nested in each other, although **only one level deep.**
+Records can be nested in each other, using **nested type definitions.**
 
 ```text
 record Position {
@@ -99,3 +99,4 @@ user =
   address.location = "Super Silly Fun Land"
 }
 ```
+
