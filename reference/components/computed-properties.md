@@ -6,7 +6,7 @@ Computed properties are functions that work like properties, they are defined wi
 component Greeter {
   property name : String = ""
 
-  get text : Html {
+  get text : String {
     "Hello " + name + "!"
   }
 
