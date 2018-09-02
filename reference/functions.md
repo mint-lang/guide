@@ -135,7 +135,7 @@ Anonymous functions look like this:
 
 (suffix : String, match : Regex.Match) : String => { match.match + suffix }
 
-() : Void { => 42 }
+() : Void => { 42 }
 ```
 
 The anonymous function starts with one or more argument definitions enclosed by parentheses followed by the type definition after a colon `:` , the `=>` separator, then a single expression that determines the return value enclosed by brackets.
