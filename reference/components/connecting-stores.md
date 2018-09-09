@@ -8,7 +8,7 @@ The component references a store with the `connect` keyword:
 store Counter {
   state count : Number = 0
 
-  fun setCount (count : Number) : Void {
+  fun setCount (count : Number) : Promise(Never, Void) {
     next { count = count }
   }
 }

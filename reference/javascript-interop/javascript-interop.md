@@ -40,7 +40,7 @@ module Greeter {
 }
 ```
 
-Your code need not return a value if you know that Mint does not expect one in that context \(such as at the end of a `do` expression or a function of type `Void`\).
+Your code need not return a value if you know that Mint does not expect one in that context \(such as at the end of a `sequence` expression or a function of type `Void`\).
 
 {% hint style="warning" %}
 You should expect your code to be used in a `return` statement.

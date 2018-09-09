@@ -4,7 +4,7 @@
 component Main {
   state greeting : String = "Welcome"
 
-  fun greet : Void {
+  fun greet : Promise(Never, Void) {
     next { greeting = newGreeting }
   } where {
     newGreeting =

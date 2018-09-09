@@ -22,6 +22,9 @@ In addition to **records** and **enums**, the following types use logical equali
 * `Date`
 * `Maybe`
 * `Result`
+* `Map`
+* `Set`
+* `SearchParams`
 
 Types that have not implemented the logical equality operation fall back to using the JavaScript **strict equality operator** `===`
 

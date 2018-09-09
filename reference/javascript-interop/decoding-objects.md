@@ -1,6 +1,6 @@
 # Decoding Objects
 
-In order to process data from JavaScript in Mint, you must convert it from Javascript:
+In order to process data from JavaScript in Mint, you must convert it from JavaScript:
 
 * object `{ name: "Joe" }`
 * array `[1, 2, 3]`

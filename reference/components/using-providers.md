@@ -6,8 +6,10 @@ A Provider represents a source of asynchronous events. To subscribe to a Provide
 component Main {
   state counter : Number = 0
 
-  use Provider.Tick { ticks = () => {
-    next { counter = state.counter + 1 } 
+  use Provider.Tick { 
+    ticks = () : Promise(Never, Void) => {
+      next { counter = state.counter + 1 } 
+    }
   }
 
   fun render : Html {

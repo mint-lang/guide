@@ -20,3 +20,17 @@ There are some rules that will be enforced:
 Currently there is no shorthand for a conditional expression.
 {% endhint %}
 
+#### else if ...
+
+Multiple `if..else` statements can be written in sequence:
+
+```text
+if (number > 5) {
+  true
+} else if (number > 2 {
+  true
+} else {
+  false
+}
+```
+

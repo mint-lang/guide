@@ -24,5 +24,4 @@ Keep in mind the following things:
 * Routes are matched in order they are defined from **top to bottom**
 * Can only have one routes block per application
 * Routes are used to set the state, not to render things
-* Routes must return `Void`
 

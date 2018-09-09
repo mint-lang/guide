@@ -26,7 +26,7 @@ All the fields are validated so if something is not right you will get a nice er
 Here are all the possible fields \(dot notation denotes a nested object\):
 
 | Path | Purpose |
-| --- | --- |
+| :--- | :--- |
 | name | The name of your application or package. |
 | source-directories | The directories which contains source files of your application. |
 | test-directories | The directories which contains tests for your application. |
@@ -36,6 +36,10 @@ Here are all the possible fields \(dot notation denotes a nested object\):
 | application.title | The initial title of the application. |
 | application.meta | An object which contains informations which is converted to META tags. |
 | application.icon | A path to an image file which is converted to different icons like [favicons](https://en.wikipedia.org/wiki/Favicon). |
+| application.orientation | \[PWA\] The orientation of the application, either "portrait" or "landscape" |
+| application.name | \[PWA\] The name of the application |
+| application.theme-color | \[PWA\] The theme color of the application  |
+| application.display | \[PWA\] The display property of the application, one of: "fullscreen", "standalone", "minimal-ui", "browser" |
 
 ## Dependencies
 

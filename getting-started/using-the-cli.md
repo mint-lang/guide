@@ -25,6 +25,7 @@ Subcommands:
   loc      # Counts Lines of Code
   start    # Starts the development server
   test     # Runs the tests
+  version  # Shows version
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

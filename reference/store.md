@@ -6,11 +6,11 @@ Stores are global containers of application specific data. They are defined with
 store Counter.Store {
   state counter : Number = 0
 
-  fun increment : Void {
+  fun increment : Promise(Never, Void) {
     next { counter = counter + 1 }
   }
 
-  fun decrement : Void {
+  fun decrement : Promise(Never, Void) {
     next { counter = counter - 1 }
   }
 }

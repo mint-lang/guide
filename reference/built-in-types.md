@@ -17,7 +17,7 @@ A good example is a HTTP request which in Mint looks like this:
 
 where the `Http.ErrorResponse` is a record containing information about the error that happened while `Http.Response` is a record containing the response of the request.
 
-Promises are used in a [do expression](control-expressions/do.md)
+Promises are used in a [sequence ](control-expressions/sequence.md)and [parallel](control-expressions/parallel.md) expressions.
 
 ## Result
 
@@ -46,7 +46,7 @@ For example, converting a `String` to a `Number`:
   |> Result.isOk() # true
   ```
 
-Results are used in [do](control-expressions/do.md) **and** [try](control-expressions/try.md) expressions.
+Results are used in [sequence](control-expressions/sequence.md), [parallel](control-expressions/parallel.md) and [try](control-expressions/try.md) expressions.
 
 ## Void
 
@@ -59,7 +59,7 @@ The void type represents a side-effect: an expression which cannot have a value,
 
 The never type is used to describe tasks \(promises or results\) that can never fail. For example, here is the type of task that can never fail: `SomeTask(Never, Value)`
 
-These tasks don't need to be caught in `do` and `try` expressions.
+These tasks don't need to be caught in [sequence](control-expressions/sequence.md), [parallel](control-expressions/parallel.md) and [try](control-expressions/try.md) expressions.
 
 ## Maybe
 
@@ -78,4 +78,6 @@ record User {
   car : Maybe(Car)
 }
 ```
+
+
 
