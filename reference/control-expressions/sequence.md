@@ -25,7 +25,7 @@ sequence {
 
   /* Parse the body of the response as JSON */
   body = 
-    Json.parse(repsonse.body)
+    Json.parse(response.body)
     |> Maybe.toResult("Json Parse Error")
 
   /*
