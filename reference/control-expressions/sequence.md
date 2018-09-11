@@ -1,6 +1,6 @@
 # sequence
 
-`sequce` expressions allows you to do things in sequence.
+`sequence` expressions allows you to do things in sequence.
 
 A `sequence` expression is built up from multiple parts:
 
@@ -30,7 +30,7 @@ sequence {
 
   /*
   Try to decode the list of users and convert the
-  Result into a Promise so we can handle it here then
+  result into a Promise so we can handle it here then
   store it in the "users" variable
   */
   users =
