@@ -55,9 +55,35 @@ component Main {
 }
 ```
 
-In this case, `user` is a `Result(Object.Error, String)`.
+In this case, `user` is a `Result(Object.Error, User)`.
 
-## Manual decoding
+## Decoding not supported names
 
-TODO
+There are times when we want to decode a key from an object into a record whats name is not supported as a record key for example `tag_list`. In this case we can use the `using` keyword to specify the mapping between the object and the record.
+
+Here is an example:
+
+```text
+record Post {
+  tagList: Array(String) using "tag_list"
+}
+```
+
+When decoding an object as a `Post` it will look for the `tag_list` field instead of the `tagList` field in the object, so this JavaScript Object:
+
+```javascript
+{
+  tag_list: ["a", "b"]
+}
+```
+
+will decode into this record: 
+
+```text
+{
+  tagList = ["a", "b"]
+}
+```
+
+...it will use this key for the encoding as well.
 

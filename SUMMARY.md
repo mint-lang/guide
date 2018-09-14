@@ -9,6 +9,7 @@
 * [Configuration](getting-started/configuration.md)
 * [The Main Component](getting-started/the-main-component.md)
 * [Styling with CSS](getting-started/styling-with-css.md)
+* [Handling Events](getting-started/handling-events.md)
 
 ## Reference
 
