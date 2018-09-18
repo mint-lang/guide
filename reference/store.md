@@ -30,5 +30,5 @@ States on a store define keys which correspond to specific type of values. They 
 
 ## Connecting to components
 
-Stores can be connected to components. To learn more, check out [ components](components/connecting-stores.md).
+Stores can be connected to components. To learn more, check out [components](components/connecting-stores.md).
 
