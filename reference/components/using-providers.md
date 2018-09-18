@@ -8,7 +8,7 @@ component Main {
 
   use Provider.Tick { 
     ticks = () : Promise(Never, Void) => {
-      next { counter = state.counter + 1 } 
+      next { counter = counter + 1 } 
     }
   }
 
