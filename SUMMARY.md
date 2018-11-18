@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Installation](https://www.mint-lang.com/install)
+* [Tools](getting-started/tools.md)
 * [Using the CLI](getting-started/using-the-cli.md)
 * [Configuration](getting-started/configuration.md)
 * [The Main Component](getting-started/the-main-component.md)
