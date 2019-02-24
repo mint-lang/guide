@@ -20,6 +20,7 @@
 * [Control Expressions](reference/control-expressions/README.md)
   * [if...else](reference/control-expressions/if...else.md)
   * [case](reference/control-expressions/case.md)
+  * [for](reference/control-expressions/for.md)
   * [try](reference/control-expressions/try.md)
   * [sequence](reference/control-expressions/sequence.md)
   * [parallel](reference/control-expressions/parallel.md)
@@ -37,8 +38,6 @@
 * [JavaScript Interop](reference/javascript-interop/README.md)
   * [Inlining JavaScript](reference/javascript-interop/javascript-interop.md)
   * [Decoding Objects](reference/javascript-interop/decoding-objects.md)
-
-## TODO
-
-* [Packages](todo/packages.md)
+  * [Encoding Objects](reference/javascript-interop/encoding-objects.md)
+* [Packages](reference/packages.md)
 

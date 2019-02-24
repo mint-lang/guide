@@ -7,7 +7,7 @@ component Main {
   state counter : Number = 0
 
   use Provider.Tick { 
-    ticks = () : Promise(Never, Void) => {
+    ticks = () : Promise(Never, Void) {
       next { counter = counter + 1 } 
     }
   }
@@ -20,7 +20,7 @@ component Main {
 }
 ```
 
-In the above example we will update `counter` every second using the [Tick Provider](https://github.com/mint-lang/mint-core/blob/master/source/Provider/Tick.mint).
+In the above example we will update `counter` every second using the [Tick Provider](https://github.com/mint-lang/mint/blob/master/core/source/Provider/Tick.mint).
 
-Other available Providers: [AnimationFrame](https://github.com/mint-lang/mint-core/blob/master/source/Provider/AnimationFrame.mint), [Mouse](https://github.com/mint-lang/mint-core/blob/master/source/Provider/Mouse.mint) and [Scroll](https://github.com/mint-lang/mint-core/blob/master/source/Provider/Scroll.mint)
+Other available Providers: [AnimationFrame](https://github.com/mint-lang/mint-core/blob/master/source/Provider/AnimationFrame.mint), [Mouse](https://github.com/mint-lang/mint/blob/master/core/source/Provider/Mouse.mint) and [Scroll](https://github.com/mint-lang/mint-core/blob/master/source/Provider/Scroll.mint)
 

@@ -7,18 +7,18 @@ You can handle events coming from the DOM using **event attributes**. An event a
 In this example we are listening on a click event:
 
 ```text
-component Button {
+component Main {
   fun render : Html {
-    <div onClick={(event : Html.Event) : String => { Debug.log("Hello") } }>
-      <{ "Click Me!" }>
-    </div>
+    <button onClick={(event : Html.Event) : String { Debug.log("Hello") } }>
+      "Click Me!"
+    </button>
   }
 }
 ```
 
 Every time the users clicks on this button the `"Hello"` string is printed in the console.
 
-Event attributes must match a specific type signature `Function(Html.Event, a)` which means that only functions which take an `Html.Event` and return something can be passed to these attributes.
+Event attributes should match a specific type signature `Function(Html.Event, a)` which means that only functions which take an `Html.Event` and return something can be passed to these attributes. Alternatively you can just pass a `Function(a)` if you don't care about the event.
 
 ### Html.Event
 

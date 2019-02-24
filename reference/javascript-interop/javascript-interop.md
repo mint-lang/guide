@@ -22,7 +22,7 @@ component Main {
 }
 ```
 
-## Inlined JavaScript Statements
+### Inlined JavaScript Statements
 
 Since Mint is an expression based language, the inlined JavaScript code must also be an expression. If you need to execute multiple JavaScript statements, wrap the code in a [self executing anonymous function](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/):
 
@@ -45,4 +45,26 @@ Your code need not return a value if you know that Mint does not expect one in t
 {% hint style="warning" %}
 You should expect your code to be used in a `return` statement.
 {% endhint %}
+
+### Interpolation in inlined JavaScript Statements
+
+In certain cases you might want access to the Mint scope \(so to speak\), you can do that by using the `#{...}` notation in inlined JavaScript. The code inside is evaluated in Mint in the current scope.
+
+```text
+module Greeter {
+  get name : String {
+    "Me"
+  }
+  
+  fun greet : String {
+    `
+    (() => {
+      Math.SquareCircle( 1.0);
+      Math.TrisectAngle( Math.Pi / 4);
+      return "Hello " + #{name} + "!"
+    })()
+    `
+  }
+}
+```
 

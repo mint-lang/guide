@@ -20,8 +20,8 @@ component Main {
       <{ greeting }>
       <br/>
 
-      <button onClick={(event : Html.Event) : Void => { greet() }}>
-        <{ "Switch" }>
+      <button onClick={greet}>
+        "Switch"
       </button>
     </div>
   }

@@ -8,7 +8,7 @@ Here we render a button on the screen:
 component Main {
   fun render : Html {
     <button>
-      <{ "Click ME!" }>
+      "Click ME!"
     </button>
   }
 }

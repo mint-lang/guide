@@ -18,8 +18,8 @@ component Main {
 
   fun render : Html {
     <div
-      onClick={(event : Html.Event) : Void => { setCount(count + 1) }}
-      onContextMenu={(event : Html.Event) : Void => { setCount(0) }}>
+      onClick={(event : Html.Event) : Void { setCount(count + 1) }}
+      onContextMenu={(event : Html.Event) : Void { setCount(0) }}>
 
       <{ "Count: " + Number.toString(count) }>
 
@@ -29,4 +29,12 @@ component Main {
 ```
 
 When connecting a store, the component must use the `exposing` keyword to list the particular functions or properties it will use.
+
+#### Exposing with a different name
+
+You can expose a connected function or property by a different name using the `as` notation:
+
+```text
+connect Counter exposing { count as myCount }
+```
 

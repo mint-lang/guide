@@ -19,7 +19,7 @@ decode object as String
 
 ...will try to convert the untyped value to a typed value. it returns a `Result(Object.Error, ...)`, which can be used in a [try expression](../control-expressions/try.md).
 
-You can decode JavaScript values into Mint **primitive values** \(`String`, `Bool`, `Number`, `Time`\) **simple structures** \(`Maybe(a)`, `Array(a)`\) and **records** which only have **decodable values**.
+You can decode JavaScript values into Mint **primitive values** \(`String`, `Bool`, `Number`, `Time`\) **simple structures** \(`Maybe(a)`,`Set(a)`,`Map(a,b)`, `Array(a)`\) and **records** which only have **decodable values**.
 
 {% hint style="info" %}
 If you try to decode a Type which is not supported or try to decode something that is not an `Object`, you will get a nice error message.

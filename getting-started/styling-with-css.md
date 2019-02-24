@@ -20,7 +20,7 @@ component Main {
 
   fun render : Html {
     <button::button>
-      <{ "Click ME!" }>
+      "Click ME!"
     </button>
   }
 }

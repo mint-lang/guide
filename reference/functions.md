@@ -131,24 +131,26 @@ This can be read as:
 Anonymous functions look like this:
 
 ```text
-(event : Number) : Void => { handleClick(event) }
+(event : Number) : Void { handleClick(event) }
 
-(suffix : String, match : Regex.Match) : String => { match.match + suffix }
+(suffix : String, match : Regex.Match) : String { match.match + suffix }
 
-() : Void => { 42 }
+() : Void { 42 }
 ```
 
-The anonymous function starts with one or more argument definitions enclosed by parentheses followed by the type definition after a colon `:` , the `=>` separator, then a single expression that determines the return value enclosed by brackets.
+The anonymous function starts with one or more argument definitions enclosed by parentheses followed by the type definition after a colon `:` , then a single expression that determines the return value enclosed by brackets.
 
 This can be used as an expression anywhere you would use a value:
 
 ```text
 component Greeter {
   fun render : Html {
-    <div onClick={(event : Html.Event) : Void => { do { Debug.log("Hello") }}}>
-      <{ "Click Me!" }>
+    <div onClick={(event : Html.Event) : Void { Debug.log("Hello") }}>
+      "Click Me!" 
     </div>
   }
 }
 ```
+
+
 
