@@ -14,18 +14,19 @@ Usage:
 Mint
 
 Flags:
-  --help   # Displays help for the current command.
+  --env, -e (default: "")  # Loads the given .env file
+  --help                   # Displays help for the current command.
 
 Subcommands:
-  build    # Builds the project for production
-  docs     # Starts the documentation server
-  format   # Formats source files
-  init     # Initializes a new project
-  install  # Installs dependencies
-  loc      # Counts Lines of Code
-  start    # Starts the development server
-  test     # Runs the tests
-  version  # Shows version
+  build                    # Builds the project for production
+  docs                     # Starts the documentation server
+  format                   # Formats source files
+  init                     # Initializes a new project
+  install                  # Installs dependencies
+  loc                      # Counts Lines of Code
+  start                    # Starts the development server
+  test                     # Runs the tests
+  version                  # Shows version
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

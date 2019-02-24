@@ -40,4 +40,5 @@
   * [Decoding Objects](reference/javascript-interop/decoding-objects.md)
   * [Encoding Objects](reference/javascript-interop/encoding-objects.md)
 * [Packages](reference/packages.md)
+* [Environment Variables](reference/environment-variables.md)
 
