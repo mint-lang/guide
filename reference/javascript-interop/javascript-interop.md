@@ -33,7 +33,7 @@ module Greeter {
     (() => {
       Math.SquareCircle( 1.0);
       Math.TrisectAngle( Math.Pi / 4)
-      return "Hello " + name + "!"
+      return "Hello " + #{name} + "!"
     })()
     `
   }
