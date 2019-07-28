@@ -24,7 +24,7 @@ parallel {
     users = users,
   }
 } catch {
- /* errors are catached here. */
+ /* errors are catched here. */
 } finally {
   /* Clean things up here. */
 }
