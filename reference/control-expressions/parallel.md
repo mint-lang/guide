@@ -15,7 +15,7 @@ An example:
 parallel {
   articles = 
     loadImages()
-  
+
   users =
     loadUsers() 
 } then {

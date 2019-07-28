@@ -12,6 +12,10 @@
 * [Styling with CSS](getting-started/styling-with-css.md)
 * [Handling Events](getting-started/handling-events.md)
 
+## Recipes
+
+* [Using third party CSS](recipes/using-third-party-css.md)
+
 ## Reference
 
 * [Literals](reference/literals.md)
