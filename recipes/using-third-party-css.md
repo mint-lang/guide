@@ -4,7 +4,7 @@ There is this frequently asked question:
 
 > How can I use it with a CSS library like bootstrap with Mint?
 
-So in this page I will guide you through it.
+In this page I will guide you through it.
 
 ### Adding the library
 
