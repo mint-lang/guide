@@ -1,6 +1,6 @@
 # Handling Events
 
-In web applications there are a lot of interactive parts, and all of these parts are handling some input form the users. Inputs can come from a variety of sources such as keyboard, and mouse. An instance of these inputs is called an **event**.
+In web applications there are a lot of interactive parts, and all of these parts are handling some input from the users. Inputs can come from a variety of sources such as keyboard, and mouse. An instance of these inputs is called an **event**.
 
 You can handle events coming from the DOM using **event attributes**. An event attribute is always starts with `on` followed by the name of the event \(capitalized\), for example: `onClick` or `onInput`.
 
