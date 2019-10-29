@@ -51,6 +51,16 @@ or can be split into smaller consecutive parts
 "world" == "hello world"
 ```
 
+you interpolate expressions in a  string with the `#{...}` syntax.
+
+```text
+try {
+  name = "Joe"
+  
+  "Hello #{name}" /* Hello Joe */
+}
+```
+
 ## Array
 
 An Array is a generic type containing elements of any other type.
