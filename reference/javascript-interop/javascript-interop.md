@@ -48,7 +48,7 @@ You should expect your code to be used in a `return` statement.
 
 ### Interpolation in inlined JavaScript Statements
 
-In certain cases you might want access to the Mint scope \(so to speak\), you can do that by using the `#{...}` notation in inlined JavaScript. The code inside is evaluated in Mint in the current scope.
+In certain cases you might want access to the Mint scope \(so to speak\), you can do that by using the interpolation syntax `#{...}` in inlined JavaScript. The code inside is evaluated in Mint in the current scope.
 
 ```text
 module Greeter {

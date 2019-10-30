@@ -19,7 +19,7 @@ Represents the [Number type](https://developer.mozilla.org/en-US/docs/Glossary/N
 -10
 ```
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Currently there are no support for other representations such as hex or binary.
 {% endhint %}
 

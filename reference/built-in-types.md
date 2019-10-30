@@ -21,7 +21,14 @@ Promises are used in a [sequence ](control-expressions/sequence.md)and [parallel
 
 ## Result
 
-The result type, represents a **synchronous** task that might fail.
+The result type, represents a **synchronous** task that might fail. It is defined as an **enum:**
+
+```text
+enum Result(error, value) {
+  Err(error)
+  Ok(value)
+}
+```
 
 In Mint, results have two parameters `Result(error, value)`:
 
@@ -63,7 +70,14 @@ These tasks don't need to be caught in [sequence](control-expressions/sequence.m
 
 ## Maybe
 
-The maybe type represents a value which may or may not exist.
+The maybe type represents a value which may or may not exist. It's defined as an **enum:**
+
+```text
+enum Maybe(value) {
+  Just(value)
+  Nothing()
+}
+```
 
 For example here is a user who may or may not have a car:
 

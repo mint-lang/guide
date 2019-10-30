@@ -152,5 +152,46 @@ component Greeter {
 }
 ```
 
+## Partial Application
 
+Functions can be[ partially applied](https://en.wikipedia.org/wiki/Partial_application) which means that if you call a function with less arguments than the number of arguments defined, it will not call the function but return an other function with takes the arguments that were left out:
+
+```text
+fun concat(head : String, tail : String) : String {
+  head + " " + tail
+}
+
+try {
+  partialFunction = 
+    concat("Head") /* Function(String) */
+
+  partialFunction("Tail") /* Head Tail */
+}
+```
+
+## Recursive Functions
+
+All functions can be called recursively:
+
+```text
+component Main {
+  fun fibonacci(num : Number) : Number {
+    if (num <= 1) {
+      1
+    } else {
+      fibonacci(num - 1) + fibonacci(num - 2)
+    }
+  }
+
+  fun render : Html {
+    <div>
+      <{ fibonacci(10) }>
+    </div>
+  }
+}
+```
+
+{% hint style="danger" %}
+Be careful when using recursive functions, the type-checker does not check if there is an exit condition, if there is not it will cause an infinite loop.
+{% endhint %}
 

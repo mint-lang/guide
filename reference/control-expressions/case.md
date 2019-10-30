@@ -23,3 +23,16 @@ There are some rules that will be enforced by either the parser or the compiler:
 `case` expressions are compiled to `if...else` statements.
 {% endhint %}
 
+## Matching an enum
+
+[Enums](../enums.md) can be matched using a case expression to destructure it's variants values like so:
+
+```text
+case (result) {
+  Result::Err error => /* do something with the error */
+  Result::Ok value => /* do something with the value */
+}
+```
+
+
+

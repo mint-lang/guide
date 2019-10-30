@@ -16,7 +16,13 @@ component Test {
 }
 ```
 
-Properties are referenced by name within the component \(in **styles, functions, getters,** etc.\).
+The name of the property must start with a lowercase letter and can only contain letters and numbers.
+
+Properties are referenced by **name** within the component \(in **styles, functions, computed properties,** etc.\).
+
+{% hint style="warning" %}
+Properties must be fully defined meaning types in it cannot have any type variables.
+{% endhint %}
 
 ## Passing properties
 
@@ -30,10 +36,17 @@ component Main {
 }
 ```
 
-Things to remember:
+All properties are type checked, attempting to set an incompatible value will show an error.
 
-* The name of the property must:
-  * start with a lowercase letter
-  * contain only letters and numbers
-* All properties are type checked, attempting to set an incompatible value will show an error.
+There are some examples of passing different things:
+
+```text
+component Main {
+  fun render : Html {
+    <Test 
+      color={variable}
+      items=[item1, item2]/>
+  }
+}
+```
 

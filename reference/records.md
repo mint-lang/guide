@@ -12,6 +12,10 @@ record User {
 }
 ```
 
+{% hint style="info" %}
+Records cannot have types which have type variables.
+{% endhint %}
+
 {% hint style="warning" %}
 Record definitions are globally unique, so defining a record with the same structure but a different name will raise an error.
 {% endhint %}
